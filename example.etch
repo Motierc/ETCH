@@ -1,0 +1,39 @@
+<!-- ETCH (Esoteric Turing Complete HTML) -->
+<!-- ANYTHING IN HERE IS A COMMENT        -->
+<!-- EXMPLE SYNTAX                        -->
+<!DOCTYPE ETCH>
+  <head>
+    <reference href="random">                                               <!-- Imports the python package "random"                         -->
+    <resource type="int" name="an_int"> 90 </resource>                      <!-- Creates an integer called "An_int" and initialises it to 90 -->
+    <resource type="str" name="a_str"> "ABC " </resource>                   <!-- Creates a string called "A_str" and initialises it to "ABC" -->
+    <resource name="best_lang"> "ETCH" </resource>                          <!-- ETCH can have variables which use all types                 -->
+    <resource type="list[num]" name="a_list"> [1, 2, 3, 4, 5] </resource>   <!-- ETCH supports lists                                         -->
+  </head>
+  <body>
+    <while condition = "An_int < 200">
+      <print>
+        <logic>
+          str + best_lang
+        </logic>
+      </print>
+      <logic set_to="An_int"> An_int ** 2 </logic>
+      <if condition="An_int == 200">
+        <print end = "!\n">"An_int is 200"</print>
+      </if>
+      <else>
+        <print>"An_int is not 200"</print>
+      </else>
+    </while>
+    <for resource = "An_int" increment="An_int+1" end_value="500">
+      <print>An_int</print>
+    </for>
+  </body>
+</ETCH>
+<!--
+<!DOCTYPE ETCH>
+  <head>
+  </head>
+  <body>
+  </body>
+</ETCH>
+-->
