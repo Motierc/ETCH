@@ -1,0 +1,16 @@
+<!DOCTYPE ETCH>
+    <head>
+        <resource name="total"> 0 </resource>
+    </head>
+    <body>
+        <input set_to="num_count">"How many people have raised money? "</input>
+        <logic set_to="num_count">int(num_count)</logic>
+        <for increment = "_+1" start_value = "0" end_value = "num_count">
+            <input set_to="num">"Enter a number: "</input>
+            <if condition = "num <= 100 and num >= 0">
+                <logic set_to="total"> total + int(num) </logic>
+            </if>
+        </for>
+        <print><logic>total</logic></print>
+    </body>
+</ETCH>

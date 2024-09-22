@@ -1,0 +1,33 @@
+<!DOCTYPE ETCH>
+    <head>
+        <resource name="total"> 0 </resource>
+    </head>
+    <body>
+        <input set_to="p_count">"How many people have raised money? "</input>
+        <logic set_to="p_count">int(p_count)</logic>
+        <for increment = "i+1" start_value = "0" end_value = "p_count">
+            <print end = ""> 
+                <logic>
+                    "Please enter ammount "+str(i+1)+": "
+                </logic>
+            </print>
+            <input set_to="money">""</input>
+            <logic set_to="total">total+int(money) </logic>
+        </for>
+        <print>
+            <logic>"A total of £"+str(total)+" was raised"</logic>
+        </print>
+        <if condition = "total < 2000">
+            <logic set_to="total">total*2</logic>
+        </if>
+        <else>
+            <logic set_to="total">total+2000</logic>
+        </else>
+        <print>"With the bonus this comes to:"</print>
+        <for increment = "_+1" start_value = "0" end_value = "3">
+            <print>
+                <logic>str(total)+"!!!"</logic>
+            </print>
+        </for>
+    </body>
+</ETCH>

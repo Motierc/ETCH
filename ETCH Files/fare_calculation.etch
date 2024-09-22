@@ -1,0 +1,30 @@
+<!DOCTYPE ETCH>
+    <head>
+        <resource name="fare"> 0 </resource>    
+    </head>
+    <body>
+        <input set_to="p_count">"How many passengers are travelling? "</input>
+        <logic set_to="p_count">int(p_count)</logic>
+        <for increment = "_+1" start_value = "0" end_value = "p_count">
+            <input set_to="age">"Enter your age: "</input>
+            <logic set_to="age">int(age)</logic>
+            <if condition="age < 12 or age >= 60">
+                <print>"Your fare is £0"</print>
+            </if>
+            <else>
+                <if condition="age <= 18">
+                    <print>"Your fare is £3"</print>
+                    <logic set_to="fare"> fare + 3</logic>
+                </if>
+                <else>
+                    <print>"Your fare is £5"</print>
+                    <logic set_to="fare"> fare + 5</logic>
+                </else>
+            </else>
+            <print>""</print>
+        </for>
+        <print>
+            <logic> "Total fare for all passengers: £"+str(fare)</logic>
+        </print>
+    </body>
+</ETCH>
